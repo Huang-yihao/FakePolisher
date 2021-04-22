@@ -1,4 +1,4 @@
-# FakePolisher-f
+# FakePolisher
 
 The code of building pca and ksvd model & polish DeepFake images to be real. Implementation of https://arxiv.org/pdf/2006.07533.pdf
 
