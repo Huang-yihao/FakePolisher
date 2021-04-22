@@ -75,9 +75,9 @@ This file will show the images of first 32 components of PCA model
 
 #### command to perform this file
 
-···
+```
 python show_PCA_dict.py --PCA_model_path "path to PCA model" --image_size_width 224 --image_size_height 224
-···
+```
 
 ```
 parser.add_argument('--PCA_model_path', type=str, default="/mnt/nvme/yihao/FakePolisher/pca_model_224_10000.pkl", help='path to the PCA dictionary, in pkl format')
@@ -150,9 +150,9 @@ This file will show the images of random 32 components of KSVD model
 
 #### command to perform this file
 
-···
+```
 python show_KSVD_dict.py --KSVD_model_path "path to KSVD model" --patch_size_width 8 --patch_size_height 8
-···
+```
 
 ```
 parser.add_argument('--KSVD_model_path', type=str, default="/mnt/nvme/yihao/FakePolisher/ksvd_dict_15.pkl", help='path to the KSVD dictionary, in pkl format')
