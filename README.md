@@ -1,6 +1,6 @@
 # FakePolisher-f
 
-The code of building pca and ksvd model & polish DeepFake images to be real
+The code of building pca and ksvd model & polish DeepFake images to be real. Implementation of https://arxiv.org/pdf/2006.07533.pdf
 
 The three SOTA fake detection methods attacked by us (CNNDetector, GANDCTAnalysis, GANFingerprints)
 
