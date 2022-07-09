@@ -9,19 +9,23 @@ from sklearn.decomposition import PCA
 
 
 def transform(input_fake_path,PCA_model_path,show_result,save_path, image_size_width,image_size_height):
-    path=input_fake_path
-    with open(path, 'rb') as f:
-        am, fil, ril = joblib.load(f)
+#     path=input_fake_path
+#     with open(path, 'rb') as f:
+#         am, fil, ril = joblib.load(f)
+    fake_image_list = os.listdir(input_fake_path)
 
     path=PCA_model_path
     with open(path, 'rb') as f:
         pca_model = joblib.load(f)
     
     fake_image_list=[]
-    for i in range(len(fil)):
+    for i in range(len(fake_image_list)):
         if i%1000==0:
             print("have processed",i,"images")
-        fake_image=fil[i]
+        fake_image_path = input_fake_path + fake_image_list[i]
+        fake_image = cv2.imread(fake_image_path)
+        fake_image = cv2.cvtColor(fake_image,cv2.COLOR_BGR2RGB)
+#         fake_image=fil[i]
         # real_image=ril[i]
         fake_image=fake_image.reshape(1,image_size_height*image_size_width*3)
         fake_image_abstract=pca_model.transform(fake_image)
