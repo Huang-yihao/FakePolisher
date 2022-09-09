@@ -17,8 +17,7 @@ def transform(input_fake_path,PCA_model_path,show_result,save_path, image_size_w
     path=PCA_model_path
     with open(path, 'rb') as f:
         pca_model = joblib.load(f)
-    
-    fake_image_list=[]
+
     for i in range(len(fake_image_list)):
         if i%1000==0:
             print("have processed",i,"images")
